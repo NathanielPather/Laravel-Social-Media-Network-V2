@@ -3,8 +3,10 @@
 @section('title', 'Page Title')
 
 @section('content')
-    <p>This is my body content.</p>
     @foreach ($posts as $post)
-        <p>{{$post->user}}</p>
+        <pre>
+            <div id="user">{{$post->user}}</div><div id="timestamp">{{date('F d, Y', strtotime($post->created_at))}}</div>
+            <div id="post">{{$post->post}}</div>
+        </pre>
     @endforeach
 @endsection

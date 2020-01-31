@@ -12,7 +12,12 @@
 </ul>
 
 <div class="container">
-    @yield('content')
+    <div class="col-1"></div>
+    <div class="col-2">
+        @yield('content')
+    </div>
+    <div class="col-3"></div>
+
 </div>
 </body>
 </html>
