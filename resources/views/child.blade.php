@@ -1,10 +1,8 @@
-<!-- Stored in resources/views/child.blade.php -->
-
 @extends('layouts.master')
 
 @section('title', 'Page Title')
 
-@section('sidebar')
+@section('navbar')
     @parent
 
     <p>This is appended to the master sidebar.</p>
