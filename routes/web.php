@@ -11,9 +11,4 @@
 |
 */
 
-Route::get(
-    '/',
-    function () {
-        return view('child');
-    }
-);
+Route::get('/', 'Controller@show');
