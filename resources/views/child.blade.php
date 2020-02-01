@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group">
-            <label>Pody:</label>
+            <label>Post:</label>
             <input type="text" name="post" placeholder="Enter a post">
             @if ($errors->has('post'))
                 <span>{{ $errors->first('post') }}</span>
@@ -41,7 +41,7 @@
 @section('posts')
     @foreach ($posts as $post)
         <pre>
-            <div id="user">{{$post->user}}</div><div id="timestamp">{{date('F d, Y', strtotime($post->created_at))}}</div>
+            <div id="user">{{$post->user_id}}</div><div id="timestamp">{{date('F d, Y', strtotime($post->created_at))}}</div>
             <div id="post">{{$post->post}}</div>
         </pre>
     @endforeach

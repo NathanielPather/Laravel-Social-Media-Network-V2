@@ -16,8 +16,33 @@ class Controller extends BaseController
 
     public function show()
     {
-        $posts = DB::table('posts')->get();
+//        $posts = Post::all();
+//        return view('child', ['posts' => $posts]);
+
+        $posts = Post::with('user')->get();
         return view('child', ['posts' => $posts]);
+
+//        $posts = Post::all();
+//        return view('child')->with(['posts' => $posts]);
+
+//        $posts = App\Post::find(1);
+
+//        $users = DB::table('users')
+//            ->join('posts', 'users.id', '=', 'posts.user_id')
+//            ->select('users.*', 'posts.*')
+//            ->get();
+
+//        $posts = Posts::all();
+//        $posts = Posts::with('user')->get();
+
+//        $users = Users::with('posts')->get();
+//        return view('child')->with(['users' => $users]);
+        //return view('child')->with(['posts' => $posts]);
+
+//        $user = new User;
+//        $user = Auth::user();
+//        $posts = $user->posts;
+//        return View::make('child')->with('posts', $posts);
     }
 
     public function create() {
