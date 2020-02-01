@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'Controller@show');
+
+Route::get('/', 'Controller@create');
+Route::post('/', 'Controller@post');

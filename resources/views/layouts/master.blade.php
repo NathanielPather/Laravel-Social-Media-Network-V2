@@ -12,9 +12,11 @@
 </ul>
 
 <div class="container">
-    <div class="col-1"></div>
+    <div class="col-1">
+        @yield('form')
+    </div>
     <div class="col-2">
-        @yield('content')
+        @yield('posts')
     </div>
     <div class="col-3"></div>
 
